@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Width="400"
+        Height="400"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="animals.MainWindow"
+        Title="Find matching animals">
+
+    <Grid x:Name="mainGrid">
+        <!-- 4 Columns -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- 5 Rows -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Rows 0–3: centered per cell -->
+        <TextBlock Text="R0 C0" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R0 C1" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R0 C2" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R0 C3" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+
+        <TextBlock Text="R1 C0" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R1 C1" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R1 C2" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R1 C3" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+
+        <TextBlock Text="R2 C0" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R2 C1" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R2 C2" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R2 C3" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+
+        <TextBlock Text="R3 C0" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R3 C1" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R3 C2" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+        <TextBlock Text="R3 C3" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" PointerPressed="TextBlock_MouseDown"/>
+
+        <!-- Row 4: centered across ALL columns -->
+        <TextBlock x:Name="timeTextBlock"
+                   Text="Row 4 – centered globally"
+                   Grid.Row="4"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="4"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   PointerPressed="TimeTextBlock_MouseDown"
+                   />
+    </Grid>
+
+</Window>
